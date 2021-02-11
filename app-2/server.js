@@ -1,3 +1,5 @@
+// all the imports are done here
+
 const mysql = require('mysql');
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -5,10 +7,13 @@ const ejs = require('ejs');
 const app = express();
 const port = 4000;
 
+// setting the view of mvc
 app.use(express.static('public'));
 app.set('view engine','ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 
+
+// db connection setup
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'sachidanand',
@@ -25,15 +30,7 @@ db.connect((err,success)=>{
     }
 });
 
-// connection.query('SELECT 1 + 1 AS solution', function (err, rows, fields) {
-//   if (err) throw err
-
-//   console.log('The solution is: ', rows[0].solution)
-// })
-
-// connection.end()
-
-// get routes here
+// routes defined here
 app.get("/",(req,res)=>{
     res.render('home');
 })
