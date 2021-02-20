@@ -1,0 +1,17 @@
+{
+  "name": "chat-example",
+  "version": "1.0.0",
+  "description": "A simple chat application system",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Sachidanand",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "express": "^4.17.1",
+    "socket.io": "^3.1.1"
+  }
+}
